@@ -1,13 +1,23 @@
 {
     "name": "share-fetch",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "version": "1.0.1",
+    "description": "并发请求控制库",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "scripts": {
         "build": "tsc",
         "test": "serve ./"
     },
-    "keywords": [],
-    "author": "",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cuo9958/share-fetch.git"
+    },
+    "keywords": [
+        "fetch"
+    ],
+    "author": {
+        "name": "疯狂紫萧",
+        "url": "https://guofangchao.com/"
+    },
     "license": "MIT"
 }

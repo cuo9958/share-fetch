@@ -111,4 +111,4 @@ class ShareFetch {
         }, 0);
     }
 }
-export default ShareRequest;
+export default ShareFetch;
