@@ -1,0 +1,13 @@
+{
+    "name": "share-fetch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "serve ./"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="yes" name="apple-touch-fullscreen" />
+        <title>测试网络并发请求</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                font-size: 100px;
+                width: 100%;
+            }
+
+            body {
+                font-size: 0.14rem;
+                line-height: 1.8;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="content">
+            <button onclick="req()">按钮</button>
+        </div>
+        <script src="/demo/test.js"></script>
+        <script>
+            window.onload = function () {
+                const req2 = new ShareFetch();
+                req2.start("/demo/test.json", { method: "GET", cache: "default" })
+                    .then((data) => {
+                        console.log("data1", data);
+                    })
+                    .catch((err) => {
+                        console.log("收到错误", err);
+                    });
+                req2.start("/demo/test.json", { method: "GET", cache: "default" })
+                    .then((data) => {
+                        console.log("data2", data);
+                    })
+                    .catch((err) => {
+                        console.log("收到错误2", err);
+                    });
+            };
+        </script>
+    </body>
+</html>
