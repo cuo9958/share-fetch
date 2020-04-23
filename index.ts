@@ -5,7 +5,7 @@ interface IReqEvent {
 }
 
 function getReqKey(url: string, data = {}) {
-    console.log("获取标准key");
+    // console.log("获取标准key");
     const key = url + JSON.stringify(data);
     return key;
 }
@@ -44,10 +44,10 @@ class ShareFetch {
     async start(url: string, data?: RequestInit) {
         const key = getReqKey(url, data);
         if (this.reqSet.has(key)) {
-            console.log("重复请求" + key, url, data);
+            // console.log("重复请求" + key, url, data);
             return this.waitReq(key);
         }
-        console.log("发起请求", url);
+        // console.log("发起请求", url);
         this.reqSet.add(key);
         return this.getReq(key, url, data);
     }
@@ -71,7 +71,7 @@ class ShareFetch {
     async getReq(key: string, url: string, data?: RequestInit) {
         try {
             const res = await this.getData(url, data);
-            console.log(key, res);
+            // console.log(key, res);
             this.resolve(key, res);
             this.reqSet.delete(key);
             return res;
@@ -90,7 +90,7 @@ class ShareFetch {
         setTimeout(() => {
             while (reqEvent[key] && reqEvent[key].length > 0) {
                 const item = reqEvent[key].shift();
-                console.log("拿到事件", item.resolve);
+                // console.log("拿到事件", item.resolve);
                 item.resolve(res);
             }
         }, 0);
@@ -105,7 +105,7 @@ class ShareFetch {
         setTimeout(() => {
             while (reqEvent[key] && reqEvent[key].length > 0) {
                 const item = reqEvent[key].shift();
-                console.log("拿到事件", item.reject);
+                // console.log("拿到事件", item.reject);
                 item.reject(err);
             }
         }, 0);

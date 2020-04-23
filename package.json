@@ -1,6 +1,6 @@
 {
     "name": "share-fetch",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "并发请求控制库",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
