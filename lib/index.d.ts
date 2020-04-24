@@ -6,7 +6,7 @@ interface IReqEvent {
  * 共享请求类，屏蔽多次请求
  */
 declare class ShareFetch {
-    constructor(getData: IGetData);
+    constructor(getData?: IGetData);
     /**
      * 默认的请求方法
      * @param url url

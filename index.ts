@@ -14,7 +14,7 @@ function getReqKey(url: string, data = {}) {
  * 共享请求类，屏蔽多次请求
  */
 class ShareFetch {
-    constructor(getData: IGetData) {
+    constructor(getData?: IGetData) {
         //初始化默认请求方法
         if (getData) this.getData = getData;
     }
