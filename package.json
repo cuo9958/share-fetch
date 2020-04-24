@@ -1,23 +1,30 @@
 {
-    "name": "share-fetch",
-    "version": "1.0.2",
-    "description": "并发请求控制库",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
-    "scripts": {
-        "build": "tsc",
-        "test": "serve ./"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/cuo9958/share-fetch.git"
-    },
-    "keywords": [
-        "fetch"
-    ],
-    "author": {
-        "name": "疯狂紫萧",
-        "url": "https://guofangchao.com/"
-    },
-    "license": "MIT"
+  "name": "share-fetch",
+  "version": "1.0.2",
+  "description": "并发请求控制库",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "webpack",
+    "test": "serve ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuo9958/share-fetch.git"
+  },
+  "keywords": [
+    "fetch"
+  ],
+  "author": {
+    "name": "疯狂紫萧",
+    "url": "https://guofangchao.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "ts-loader": "^7.0.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
 }
