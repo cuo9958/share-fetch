@@ -77,6 +77,7 @@ class ShareFetch {
             return res;
         } catch (error) {
             this.reject(key, error);
+            this.reqSet.delete(key);
             throw error;
         }
     }
